@@ -24,7 +24,7 @@ struct Activity {
 };
 
 // Comparator function to sort activities by their end time
-bool activityCompare(Activity a, Activity b) {
+bool endsEarlier(Activity a, Activity b) {
     return a.end < b.end;
 }
 
@@ -32,6 +32,15 @@ bool activityCompare(Activity a, Activity b) {
 int bruteForceActivitySelection(std::vector<Activity>& activities) {
     // Complete this function
     return 0; // Placeholder
+}
+int bruteForceRecursiveHelper(std::vector<Activity>& activities, int index, int lastEnd) {
+    // Complete this function
+
+    return 0; /// Placeholder
+}
+
+int bruteForceRecursive(std::vector<Activity>& activities) {
+    return bruteForceRecursiveHelper(activities, 0, 0);
 }
 
 // TODO: Implement the greedy solution
@@ -45,7 +54,7 @@ int main() {
         {1, 2}, {3, 4}, {0, 6}, {5, 7}, {8, 9}, {5, 9}
     };
 
-    std::cout << "Brute Force Solution: " << bruteForceActivitySelection(activities) << '\n';
+    std::cout << "Brute Force Solution: " << bruteForceRecursive(activities) << '\n';
     std::cout << "Greedy Solution: " << greedyActivitySelection(activities) << '\n';
 
     return 0;
