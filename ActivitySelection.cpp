@@ -39,6 +39,8 @@ int bruteForceRecursiveHelper(std::vector<Activity>& activities, int index, int 
 }
 
 int bruteForceRecursive(std::vector<Activity>& activities) {
+    // Optional: Sort the activities  by end time
+    std::sort(activities.begin(), activities.end(), activityCompare);
     return bruteForceRecursiveHelper(activities, 0, 0);
 }
 
