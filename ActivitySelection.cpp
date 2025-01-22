@@ -35,7 +35,6 @@ int bruteForceActivitySelection(std::vector<Activity>& activities) {
 }
 int bruteForceRecursiveHelper(std::vector<Activity>& activities, int index, int lastEnd) {
     // Complete this function
-
     return 0; /// Placeholder
 }
 
